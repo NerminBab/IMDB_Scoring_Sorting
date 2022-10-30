@@ -98,3 +98,11 @@ def bayesian_average_rating(n, confidence=0.95):
 # esaretin bedeli filmi için yıldız alma puanlarını yazarak bayes ortalama derecelendirme puanı hesaplarsak:
 bayesian_average_rating([34733, 4355, 4704, 6561, 13515, 26183, 87368, 273082, 600260, 1295351])
 
+df = pd.read_csv("imdb_ratings.csv") # yıldız puanlarına eriştik
+df = df.iloc[0:, 1:]
+
+df["bar_score"] = df.apply(lambda x: bayesian_average_rating(x[["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]]),axis=1)
+
+df.sort_values("bar_score", ascending=False).head(20)
+
+# IMDB nin günümüzdeki sıralaması ile neredeyse aynı.
