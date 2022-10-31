@@ -1,2 +1,3 @@
-# IMDB Movies Scoring & Sorting
-# ilk 250 filmi sıralayacağız ve IMBD ye ne kadar yaklaştığımızı gözlemleyeceğiz
+## IMDB Movies Scoring & Sorting
+###
+İlk 250 filmi sıralayacağız ve IMBD nin kendi sıralamasına ne kadar yaklaştığımızı gözlemleyeceğiz.
